@@ -37,7 +37,7 @@ namespace Lab_2
             if (obj != null && obj.GetType() == this.GetType())
             {
                 Task other = obj as Task;
-                if (other.Name == this.Name && other.Status == this.Status)
+                if (other.Name.Equals(this.Name) && other.Status == this.Status)
                 {
                     return true;
                 }

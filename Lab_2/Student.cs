@@ -70,18 +70,21 @@ namespace Lab_2
             if (obj != null && obj.GetType() == this.GetType())
             {
                 Student other = obj as Student;
-                if (other.Name == this.Name)
+                if (other.Name.Equals(this.Name))
                 {
-                    if (other.Age == this.Age)
+                    if (other.Age.Equals(this.Age))
                     {
-                        for(int i = 0; i < this.tasks.Count; i++)
+                        if (this.tasks.Count == other.tasks.Count)
                         {
-                            if(!this.tasks[i].Equals(other.tasks[i]))
+                            for (int i = 0; i < this.tasks.Count; i++)
                             {
-                                return false;
+                                if (!this.tasks[i].Equals(other.tasks[i]))
+                                {
+                                    return false;
+                                }
                             }
+                            return true;
                         }
-                        return true;
                     }
                 }
             }

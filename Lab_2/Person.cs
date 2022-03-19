@@ -43,7 +43,7 @@ namespace Lab_2
             if(obj != null && obj.GetType() == this.GetType())
             {
                 Person other = obj as Person;
-                if(other.Name == this.Name && other.Age == this.Age)
+                if(other.Name.Equals(this.Name) && other.Age == this.Age)
                 {
                     return true;
                 }
